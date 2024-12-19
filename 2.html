@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap to Low-Level Computing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin: 20px 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin: 0;
+            cursor: pointer;
+            color: #0056b3;
+        }
+        .section-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .milestone {
+            background: #e7f5ff;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #1c7ed6;
+        }
+        .tips {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleContent(sectionId) {
+            const content = document.getElementById(sectionId);
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <h1>Roadmap to Low-Level Computing</h1>
+    
+    <div class="section">
+        <h2 onclick="toggleContent('step1')">Step 1: Understanding Transistors and Basic Digital Logic</h2>
+        <div id="step1" class="section-content">
+            <p><strong>Goal:</strong> Grasp how transistors work and how they combine to form logic gates.</p>
+            <ol>
+                <li><strong>Learn the Basics:</strong>
+                    <ul>
+                        <li>Study how a transistor works (MOSFETs and BJTs).</li>
+                        <li>Understand how transistors are used to create logic gates (AND, OR, NOT).</li>
+                        <li>Resources: 
+                            <a href="https://www.amazon.com/dp/0123944244">Digital Design and Computer Architecture</a> (Chapter 1), 
+                            <a href="https://www.falstad.com/circuit/">Falstad Circuit Simulator</a>.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Hands-On Practice:</strong> Build logic gates (AND, OR, NOT) on a breadboard using transistors.</li>
+            </ol>
+            <div class="milestone">
+                <strong>Milestone:</strong> Successfully implement basic logic gates and test their functionality.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 onclick="toggleContent('step2')">Step 2: Combinational and Sequential Logic</h2>
+        <div id="step2" class="section-content">
+            <p><strong>Goal:</strong> Understand how logic gates form complex circuits like adders and memory units.</p>
+            <ol>
+                <li><strong>Combinational Logic:</strong>
+                    <ul>
+                        <li>Learn about multiplexers, decoders, and adders.</li>
+                        <li>Example: Build a 4-bit adder using XOR and AND gates.</li>
+                    </ul>
+                </li>
+                <li><strong>Sequential Logic:</strong>
+                    <ul>
+                        <li>Study flip-flops (SR, JK, D, T) and how they store data.</li>
+                        <li>Learn how counters and shift registers work.</li>
+                    </ul>
+                </li>
+                <li><strong>Simulate:</strong> Use Logisim or Digital to simulate and verify circuits.</li>
+            </ol>
+            <div class="milestone">
+                <strong>Milestone:</strong> Design and simulate a 4-bit binary counter.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 onclick="toggleContent('step3')">Step 3: Building a Simple CPU</h2>
+        <div id="step3" class="section-content">
+            <p><strong>Goal:</strong> Understand the architecture of a basic CPU.</p>
+            <ol>
+                <li><strong>Learn CPU Basics:</strong>
+                    <ul>
+                        <li>Understand the CPU components: ALU, registers, control unit, and memory.</li>
+                        <li>Learn how instructions are fetched, decoded, and executed.</li>
+                    </ul>
+                </li>
+                <li><strong>Hands-On:</strong> Take the <a href="https://www.nand2tetris.org/">Nand2Tetris</a> course and design a CPU using HDL.</li>
+            </ol>
+            <div class="milestone">
+                <strong>Milestone:</strong> Complete the CPU design and execute a simple program.
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat similar sections for Steps 4 to 8 -->
+
+    <div class="tips">
+        <strong>General Tips:</strong>
+        <ul>
+            <li>Take notes at every step to solidify your understanding.</li>
+            <li>Break tasks into smaller, manageable units.</li>
+            <li>Join communities like <a href="https://www.reddit.com/r/OSDev/">r/OSDev</a> and engage in discussions.</li>
+        </ul>
+    </div>
+</body>
+</html>
